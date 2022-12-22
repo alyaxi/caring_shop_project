@@ -48,7 +48,7 @@ import UserPage from "./components/user/UserPage";
 import Contact from "./components/Contact";
 
 //super-admin
-import SuperLogin from "./components/super-admin/Login";
+import SuperLogin from "./components/super-admin/login";
 import SuperDashboard from "./components/super-admin/Dashboard";
 import SuperProductsList from "./components/super-admin/ProductsList";
 import SuperNewProduct from "./components/super-admin/NewProduct";
