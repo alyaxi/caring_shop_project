@@ -1,0 +1,61 @@
+.FollowerCard {
+  width: 85%;
+  height: 57%;
+  overflow: scroll;
+  border-radius: 0.7rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  background-color: var(--cardColor);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.follower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.follower > div {
+  display: flex;
+  gap: 10px;
+}
+
+.single-comment {
+  padding: 10px 5px;
+}
+
+.comment-image {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.followerImage {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.name > span:nth-of-type(1) {
+  font-weight: bold;
+}
+.fc-button {
+  height: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.UnfollowButton {
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  cursor: pointer;
+  background: transparent;
+}
