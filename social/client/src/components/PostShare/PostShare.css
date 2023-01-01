@@ -60,3 +60,14 @@
     object-fit: cover;
     border-radius: 0.5rem;
 }
+.a-button{
+    
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(48, 14, 172);
+  border: none;
+  border-radius: 0.5rem;
+  background-color: none;
+  transition: all 100ms ease-out;
+}

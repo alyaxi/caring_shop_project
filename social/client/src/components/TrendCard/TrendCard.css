@@ -8,8 +8,8 @@
   padding-bottom: 1rem;
   border-radius: 1rem;
   width: 90%;
-  height: calc(30% + 5px);
   overflow: scroll;
+  height: calc(100vh - 450px);
 }
 .trend {
   display: flex;

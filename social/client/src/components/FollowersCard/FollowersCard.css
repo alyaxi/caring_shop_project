@@ -1,6 +1,6 @@
 .FollowerCard {
   width: 85%;
-  height: 57%;
+  height: calc(100vh - 185px);
   overflow: scroll;
   border-radius: 0.7rem;
   gap: 1rem;
@@ -12,6 +12,7 @@
   padding-right: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+
 }
 .follower {
   display: flex;

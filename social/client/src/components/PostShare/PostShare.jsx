@@ -6,11 +6,12 @@ import { UilPlayCircle } from "@iconscout/react-unicons";
 import { UilLocationPoint } from "@iconscout/react-unicons";
 import { UilSchedule } from "@iconscout/react-unicons";
 import { UilTimes } from "@iconscout/react-unicons";
-
+import ShareModal from "../ShareModal/ShareModal";
 import { UilPen } from "@iconscout/react-unicons";
 import { uploadImage, uploadPost } from "../../actions/uploadAction";
 
 const PostShare = () => {
+  const [modalOpened, setModalOpened] = useState(false);
   const loading = useSelector((state) => state.postReducer.uploading);
   const [image, setImage] = useState(null);
   const imageRef = useRef();
@@ -40,7 +41,6 @@ const PostShare = () => {
       desc: desc.current.value,
       name: user.firstname + " " + user.lastname,
       profile: user.profilePicture,
-      desc: " ",
     };
 
     if (image) {
@@ -87,10 +87,15 @@ const PostShare = () => {
             <UilScenery />
             Photo
           </div>
-          <div className="option" style={{ color: "var(--video)" }}>
+          {/*<div className="option" style={{ color: "var(--video)" }}>
             <UilPen />
             Text
-          </div>
+          </div>*/}
+          <button className=" a-button" onClick={() => setModalOpened(true)}>
+        <UilPen/>
+        Text
+      </button>
+      <ShareModal modalOpened={modalOpened} setModalOpened={setModalOpened} />{" "}
           <div className="option" style={{ color: "var(--location)" }}>
             <UilLocationPoint />
             Location
