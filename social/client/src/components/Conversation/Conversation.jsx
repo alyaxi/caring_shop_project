@@ -7,7 +7,6 @@ const Conversation = ({ data, currentUserId, online, message }) => {
 
   useEffect(() => {
     const userId = data.members.find((id) => id !== currentUserId);
-    //console.log(userId._id)
     const getUserData = async () => {
       try {
         const { data } = await getUser(userId);
@@ -18,6 +17,7 @@ const Conversation = ({ data, currentUserId, online, message }) => {
     };
     if (userId) getUserData();
   }, []);
+
   return (
     <>
       <div className="follower conversation">
@@ -28,7 +28,18 @@ const Conversation = ({ data, currentUserId, online, message }) => {
         ) : (
           <div>
             {online && <div className="online-dot"></div>}
-
+            <img
+                    src={
+                      userData?.profilePicture
+                        ? process.env.REACT_APP_PUBLIC_FOLDER +
+                          userData.profilePicture
+                        : process.env.REACT_APP_PUBLIC_FOLDER +
+                          "defaultProfile.png"
+                    }
+                    alt="Profile"
+                    className="followerImage"
+                    style={{ width: "50px", height: "50px" }}
+                  />
             <div className="name" style={{ fontSize: "0.8rem" }}>
               <span>
                 {userData?.firstname} {userData?.lastname}

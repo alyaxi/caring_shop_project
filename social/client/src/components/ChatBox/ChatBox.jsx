@@ -14,6 +14,7 @@ const ChatBox = ({
   setSendMessage,
   recieveMessage,
   setChats,
+  chats,
 }) => {
   const [userData, setUserData] = useState({});
   const [messages, setMessages] = useState([]);
@@ -192,6 +193,7 @@ const ChatBox = ({
       </div>
       {showModal && (
         <UserList
+          chats={chats}
           visible
           onClose={() => setShowModal(false)}
           onFinish={setChats}

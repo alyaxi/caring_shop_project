@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./PostShare.css";
 import { UilScenery } from "@iconscout/react-unicons";
-import { UilPlayCircle } from "@iconscout/react-unicons";
 import { UilLocationPoint } from "@iconscout/react-unicons";
 import { UilSchedule } from "@iconscout/react-unicons";
 import { UilTimes } from "@iconscout/react-unicons";

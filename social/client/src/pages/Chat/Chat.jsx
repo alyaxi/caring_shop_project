@@ -29,7 +29,7 @@ const Chat = () => {
   }, [sendMessage]);
 
   useEffect(() => {
-    socket.current = io("http://13.212.97.43:8100");
+    socket.current = io("http://localhost:8100");
     socket.current.emit("new-user-add", user._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
@@ -97,6 +97,11 @@ const Chat = () => {
             <NavIcons />
           </div>
           <ChatBox
+            chats={chats
+              .map((chat) =>
+                chat.members.filter((member) => member !== user._id)
+              )
+              .flat()}
             chat={currentChat}
             setChats={setChats}
             currentUser={user._id}
@@ -108,6 +113,9 @@ const Chat = () => {
       {showModal && (
         <UserList
           visible
+          chats={chats
+            .map((chat) => chat.members.filter((member) => member !== user._id))
+            .flat()}
           onClose={() => setShowModal(false)}
           onFinish={setChats}
         />

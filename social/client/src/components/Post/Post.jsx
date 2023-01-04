@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Post.css";
 import { useDispatch } from "react-redux";
 import commentIcon from "../../img/comment.png";
-import Share from "../../img/share.png";
 import Heart from "../../img/like.png";
 import NotLike from "../../img/notlike.png";
 import { useSelector } from "react-redux";
@@ -125,7 +124,7 @@ const Post = ({ data }) => {
         <Link to="../chat">
           <img src={commentIcon} alt="comment" />
         </Link>
-        <img src={Share} alt="share" />
+        
       </div>
       <span style={{ color: "var(--gray)", fontSize: "12px" }}>
         {likes} likes
@@ -158,7 +157,7 @@ const Post = ({ data }) => {
           height={25}
           // onEnter={handleSend}
         />
-        <button className="comment" onClick={onComment}>
+        <button className="button comment" onClick={onComment}>
           Post
         </button>
       </div>

@@ -6,7 +6,7 @@
   --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
   --hrColor: #cfcdcd;
   --cardColor: rgba(255, 255, 255, 0.64);
-  --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+  --buttonBg: linear-gradient(98.63deg, #f84c17 0%, #f84c17  100%);
   --inputColor: rgba(40, 52, 62, 0.07);
   --photo: #4cb256;
   --video: #4a4eb7;
@@ -57,7 +57,7 @@ body,
 }
 ::-webkit-scrollbar {
   display: none;
-}
+} 
 .d-flex {
   display: flex;
 }
@@ -81,7 +81,6 @@ body,
 .bg-white {
   background-color: #fff;
 }
-
 .border-bottom-1-grey {
   border-bottom: 1px solid #e0e0e0;
 }
